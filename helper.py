@@ -22,7 +22,7 @@ def fetch_stats(selected_user,df):
     # fetch number of media messages
     num_media_messages = df[df['message'] == '<Media omitted>\n'].shape[0]
 
-    # fetch number of links shared
+    # fetch number of links shared in it
     links = []
     for message in df['message']:
         links.extend(extract.find_urls(message))
